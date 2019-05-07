@@ -9,7 +9,7 @@ const forecast = (longitude, latitude, callback) => {
             callback('Weather is not found',undefined);
         }else{
             const current = response.body.currently;
-            callback(undefined,`It is currently ${current.temperature} degrees out.  There is a ${current.precipProbability}% chance of rain.`);
+            callback(undefined,`It is currently ${current.temperature} degrees out.  The humidity is ${current.humidity}.  There is a ${current.precipProbability}% chance of rain.`);
         }
     });  
  }
