@@ -5,7 +5,7 @@ form.addEventListener('submit', e => {
     document.querySelector('.error').textContent = '';
     document.querySelector('.forecast').textContent = '';
     
-    fetch(`http://localhost:3000/weather?address=${search.value}`).then(response => {
+    fetch(`/weather?address=${search.value}`).then(response => {
     response.json().then(data => {
         if(data.error){
             document.querySelector('.error').textContent = data.error;
